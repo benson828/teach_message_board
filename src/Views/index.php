@@ -1,27 +1,3 @@
-<?php
-
-use App\Service\MessageBoard;
-
-require '../../vendor/autoload.php';
-
-$messageBoard = new MessageBoard();
-// 獲取留言
-$getMsg = $messageBoard->getMessage();
-// 新增留言
-if (isset($_POST['add_msg'])) {
-    $messageBoard->addMessage($_POST['new_title'], $_POST['new_msg']);
-    $getMsg = $messageBoard->getMessage();//重新獲取留言
-}
-
-if (isset($_POST['delete_msg'])) {
-    $messageBoard->deleteMessage($_POST['id']);
-    $getMsg = $messageBoard->getMessage();
-}
-if (isset($_POST['update_msg'])) {
-    $messageBoard->updateMessage($_POST['id'], $_POST['editTitle'], $_POST['editContent']);
-    $getMsg = $messageBoard->getMessage();
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
