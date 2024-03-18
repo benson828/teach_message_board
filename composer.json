@@ -1,0 +1,15 @@
+{
+  "name": "user/teach-message_board",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "kkx",
+      "email": "benson08281015@gmail.com"
+    }
+  ],
+  "require": {}
+}
